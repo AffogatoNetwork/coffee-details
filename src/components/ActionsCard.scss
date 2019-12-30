@@ -1,0 +1,30 @@
+// .coffee-details {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+// }
+// .action-card {
+//   text-align: center;
+//   .card-body {
+//     min-height: 10.5625rem;
+//   }
+// }
+
+.action-details {
+  .no-border {
+    border-bottom: 0px solid #e1e5eb !important;
+  }
+
+  img {
+    // height: 50px;
+    // width: auto;
+  }
+
+  .best {
+    text-align: center;
+    float: right;
+    img {
+      height: 40px;
+    }
+  }
+}

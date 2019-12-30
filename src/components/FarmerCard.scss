@@ -1,0 +1,64 @@
+.user-details__avatar {
+  border-radius: 50%;
+  max-width: 100%;
+  box-shadow: none;
+  text-align: center;
+}
+.user-details__bg:after {
+  background: none;
+}
+
+.card-header,
+.user-details__avatar {
+  cursor: pointer;
+}
+
+.fa-camera {
+  font-size: 25px;
+  color: #332211;
+  position: absolute;
+  z-index: 1;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.user-details__bg.open {
+  max-height: 100%;
+}
+.user-details__bg.closed {
+  max-height: 7.1875rem;
+}
+
+.user-details__avatar img {
+  width: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+}
+
+.user-avatar {
+  max-height: 115px;
+}
+
+.identicon {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.burner-button {
+  background-color: rgb(247, 107, 28);
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  cursor: pointer;
+  border-color: rgb(247, 107, 28);
+}
+
+.burner-button:hover,
+button.btn.burner-button.btn.btn-secondary {
+  background-color: rgb(253, 108, 25);
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  cursor: pointer;
+  border-color: rgb(253, 108, 25);
+}

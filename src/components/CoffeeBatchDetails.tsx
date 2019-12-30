@@ -3,10 +3,12 @@ import { useParams } from "react-router";
 import Loading from "./Loading";
 import useAxios from "axios-hooks";
 import NotFound from "./NotFound";
+import FarmerCard from "./FarmerCard";
 import CoffeeCard from "./CoffeeCard";
 import CupProfilesCard from "./CupProfilesCard";
 import CertificatesCard from "./CertificatesCard";
 import "./CoffeeBatchDetail.scss";
+import ActionsCard from "./ActionsCard";
 
 function CoffeeBatchDetails() {
   let { ipfsHash } = useParams();
@@ -35,9 +37,11 @@ function CoffeeBatchDetails() {
             </div>
             <div className="row mt-0">
               <div className="col-sm-12 col-lg-4">
-                <CoffeeCard data={data} />
+                <FarmerCard data={data} />
               </div>
               <div className="col-lg-8">
+                <CoffeeCard data={data} />
+                <ActionsCard data={data} />
                 <CupProfilesCard data={data} />
                 <CertificatesCard data={data} />
               </div>
@@ -57,7 +61,7 @@ function CoffeeBatchDetails() {
               className="nav-link"
               rel="nofollow"
               target="_blank"
-              href="http://buidlhonduras.com/tag/coffee/"
+              href="https://medium.com/affogato-network"
             >
               Blog
             </a>

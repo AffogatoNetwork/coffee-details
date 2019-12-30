@@ -1,40 +1,29 @@
-.user-details__avatar {
-  border-radius: 50%;
-  max-width: 100%;
-  box-shadow: none;
+// .coffee-details {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+// }
+.coffee-card {
   text-align: center;
+  .card-body {
+    min-height: 10.5625rem;
+  }
+  .card-header {
+    background-image: url("../assets/coffee.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+  }
+
+  h5 {
+    color: white;
+  }
 }
 
-.user-details__avatar img {
-  width: auto;
-  object-fit: cover;
-  border-radius: 50%;
-  width: 115px;
-  height: 115px;
+.coffee-details {
+  .no-border {
+    border-bottom: 0px solid #e1e5eb !important;
+  }
 }
-
-.user-avatar {
-  max-height: 115px;
-}
-
-.identicon {
-  vertical-align: middle;
-  border-style: none;
-}
-
-.burner-button {
-  background-color: rgb(247, 107, 28);
-  color: rgb(255, 255, 255);
-  white-space: nowrap;
-  cursor: pointer;
-  border-color: rgb(247, 107, 28);
-}
-
-.burner-button:hover,
-button.btn.burner-button.btn.btn-secondary {
-  background-color: rgb(253, 108, 25);
-  color: rgb(255, 255, 255);
-  white-space: nowrap;
-  cursor: pointer;
-  border-color: rgb(253, 108, 25);
+.user-teams .container-fluid .row {
+  min-height: 100%;
+  margin-top: 30px;
 }
