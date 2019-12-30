@@ -5,8 +5,6 @@ import useAxios from "axios-hooks";
 import NotFound from "./NotFound";
 import FarmerCard from "./FarmerCard";
 import CoffeeCard from "./CoffeeCard";
-import CupProfilesCard from "./CupProfilesCard";
-import CertificatesCard from "./CertificatesCard";
 import "./CoffeeBatchDetail.scss";
 import ActionsCard from "./ActionsCard";
 
@@ -42,8 +40,6 @@ function CoffeeBatchDetails() {
               <div className="col-lg-8">
                 <CoffeeCard data={data} />
                 <ActionsCard data={data} />
-                <CupProfilesCard data={data} />
-                <CertificatesCard data={data} />
               </div>
             </div>
           </div>
