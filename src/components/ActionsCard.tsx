@@ -13,7 +13,7 @@ type props = {
   };
 };
 export default function ActionsCard(props: props) {
-  const { coffee, farm } = props.data;
+  const { coffee } = props.data;
   return (
     <div className="card card-small user-teams mb-4 action-card ">
       <div className="card-header border-bottom  px-4">
@@ -22,8 +22,8 @@ export default function ActionsCard(props: props) {
       <div className="container-fluid action-details px-4">
         {_.map(coffee.actions, function(action: IAction, index: number) {
           return (
-            <>
-              <div className={`row mb-4 px-3 no-border ${action.type}`} key={index}>
+            <React.Fragment key={index}>
+              <div className={`row mb-4 px-3 no-border ${action.type}`}>
                 <div className="user-teams__image col-2 col-sm-1 col-lg-2 p-0 my-auto">
                   <img
                     src={`${process.env.REACT_APP_IPFS_URL}/${action.actor?.image_hash}`}
@@ -37,15 +37,37 @@ export default function ActionsCard(props: props) {
                     {action.type}: {action.description}
                   </span>
                 </div>
-                <div className="best">
-                  <h6 className="m-0">Best For</h6>
-                  <span>
-                    <img src={pour} alt="pour over coffee" className="pour" />
-                    <img src={drip} alt="drip machine" className="drip" />
-                  </span>
-                </div>
+                {action.type === "Roasted" ? (
+                  <div className="best">
+                    <h6 className="m-0">Best For</h6>
+                    <span>
+                      {_.map(action.additionalInformation.best, function(
+                        best: string,
+                        index: number
+                      ) {
+                        let image = drip;
+                        switch (best) {
+                          case "drip":
+                            image = drip;
+                            break;
+                          case "pour":
+                            image = pour;
+                            break;
+                          default:
+                            image = drip;
+                            break;
+                        }
+                        return (
+                          <img src={image} alt={`${best} coffee`} className={best} key={index} />
+                        );
+                      })}
+                    </span>
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>
