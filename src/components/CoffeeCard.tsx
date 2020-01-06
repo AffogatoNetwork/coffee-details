@@ -25,7 +25,9 @@ export default function CoffeeCard(props: props) {
             {coffee.cupProfile ? (
               <div className="col user-teams__info ">
                 <h6 className="m-0">Score</h6>
-                <span className="text-light">{coffee.cupProfile[0].score}/100</span>
+                <span className="text-light">
+                  {coffee.cupProfile[0].score == "N/A" ? coffee.cupProfile[0].score : "/100"}
+                </span>
               </div>
             ) : (
               <></>
