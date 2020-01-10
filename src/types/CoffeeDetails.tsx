@@ -6,6 +6,7 @@ export type IActor = {
   region?: string;
   country?: string;
   email?: string;
+  url?: string;
 };
 
 export type IFarm = {

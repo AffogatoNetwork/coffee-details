@@ -25,11 +25,14 @@ export default function ActionsCard(props: props) {
             <React.Fragment key={index}>
               <div className={`row mb-4 px-3 no-border ${action.type}`}>
                 <div className="user-teams__image col-2 col-sm-1 col-lg-2 p-0 my-auto">
-                  <img
-                    src={`${process.env.REACT_APP_IPFS_URL}/${action.actor?.image_hash}`}
-                    width="56"
-                    className=""
-                  />
+                  <a href={action.actor?.url} target="_blank">
+                    {" "}
+                    <img
+                      src={`${process.env.REACT_APP_IPFS_URL}/${action.actor?.image_hash}`}
+                      width="56"
+                      className=""
+                    />
+                  </a>
                 </div>
                 <div className="col user-teams__info pl-3">
                   <h6 className="m-0">{action.actor?.name}</h6>
