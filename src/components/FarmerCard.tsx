@@ -91,6 +91,11 @@ export default function CoffeeCard(props: props) {
               <span>{farmer.email}</span>
             </div>
           </div>
+          <div className="user-details__tags  text-center m-2 mt-2">
+            <a className="btn burner-button " href="https://affogato.co/" target="blank">
+              <i className="fas fa-coffee mr-1 fa-sm" /> Buy Coffee
+            </a>
+          </div>
         </div>
 
         <div className="user-details__user-data border-top border-bottom p-4 text-center">
